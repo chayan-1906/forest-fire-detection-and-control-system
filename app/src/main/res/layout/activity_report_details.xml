@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ReportDetailsActivity">
+
+    <View
+	android:layout_width="match_parent"
+	android:layout_height="210dp"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentTop="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginTop="20dp"
+	android:background="@drawable/background_report" />
+
+    <!-- Toolbar -->
+    <RelativeLayout
+	android:id="@+id/relativeLayoutToolbar"
+	android:layout_width="match_parent"
+	android:layout_height="65dp"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentTop="true"
+	android:layout_alignParentEnd="true"
+	android:background="@drawable/shape_toolbar">
+
+	<!-- Back Button -->
+	<androidx.appcompat.widget.AppCompatImageButton
+	    android:id="@+id/imageButtonBack"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_margin="10dp"
+	    android:background="@android:color/transparent"
+	    android:src="@drawable/ic_back_black" />
+
+	<!-- TextView: Title -->
+	<TextView
+	    android:id="@+id/textViewTitle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_marginTop="10dp"
+	    android:layout_toEndOf="@id/imageButtonBack"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:gravity="start"
+	    android:singleLine="true"
+	    android:text="Regional Office User Name"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="20sp"
+	    android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginTop="210dp"
+	android:background="@drawable/shape_rect" />
+
+    <!-- Circle Image View for profile image -->
+    <de.hdodenhof.circleimageview.CircleImageView
+	android:id="@+id/imageViewProfile"
+	android:layout_width="120dp"
+	android:layout_height="120dp"
+	android:layout_centerHorizontal="true"
+	android:layout_marginTop="150dp"
+	android:background="@android:color/transparent"
+	android:src="@drawable/profile_image" />
+
+    <ScrollView
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_alignParentBottom="true"
+	android:layout_marginTop="10dp"
+	android:layout_below="@id/imageViewProfile"
+	android:layout_marginBottom="8dp"
+	android:background="@drawable/shape_rect"
+	android:paddingHorizontal="16dp">
+
+	<LinearLayout
+	    android:id="@+id/linearLayoutDetails"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:orientation="vertical">
+
+	    <!-- TextView: Full Name -->
+	    <TextView
+		android:id="@+id/textViewFullName"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:fontFamily="serif"
+		android:gravity="center"
+		android:text="Full Name"
+		android:textAlignment="center"
+		android:textColor="@color/secondaryColor"
+		android:textSize="20sp"
+		android:textStyle="bold" />
+
+	    <!-- TextView: Email -->
+	    <TextView
+		android:id="@+id/textViewEmail"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:fontFamily="serif"
+		android:gravity="center"
+		android:text="Email"
+		android:textAlignment="center"
+		android:textColor="@color/secondaryColor"
+		android:textSize="12sp" />
+
+	    <LinearLayout
+		android:id="@+id/linearLayoutFirst"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginVertical="8dp"
+		android:orientation="horizontal">
+
+		<!-- Address -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutOfficeAddress"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_marginVertical="8dp"
+		    android:layout_weight="1"
+		    android:gravity="center"
+		    android:orientation="vertical">
+
+		    <TextView
+			android:id="@+id/textViewOfficeAddressLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="Office Address"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		    <TextView
+			android:id="@+id/textViewOfficeAddressValue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="N/A"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryColor"
+			android:textSize="18sp" />
+
+		</LinearLayout>
+
+	    </LinearLayout>
+
+	    <LinearLayout
+		android:id="@+id/linearLayoutSecond"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginVertical="8dp"
+		android:orientation="horizontal">
+
+		<!-- Fire Location -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutFireLocation"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center"
+		    android:orientation="vertical">
+
+		    <TextView
+			android:id="@+id/textViewFireLocationLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="Fire Location"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		    <TextView
+			android:id="@+id/textViewFireLocationValue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="N/A"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryColor"
+			android:textSize="18sp" />
+
+		</LinearLayout>
+
+		<!-- Office Location -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutOfficeLocation"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center"
+		    android:orientation="vertical">
+
+		    <TextView
+			android:id="@+id/textViewOfficeLocationLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="Office Location"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		    <TextView
+			android:id="@+id/textViewOfficeLocationValue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="N/A"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryColor"
+			android:textSize="18sp" />
+
+		</LinearLayout>
+
+	    </LinearLayout>
+
+	    <LinearLayout
+		android:id="@+id/linearLayoutThird"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_marginVertical="8dp"
+		android:orientation="horizontal">
+
+		<!-- Distance -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutDistance"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center"
+		    android:orientation="vertical">
+
+		    <TextView
+			android:id="@+id/textViewDistanceLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="Distance"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		    <TextView
+			android:id="@+id/textViewDistanceValue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="N/A"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryColor"
+			android:textSize="18sp" />
+
+		</LinearLayout>
+
+		<!-- Date -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutDate"
+		    android:layout_width="0dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:gravity="center"
+		    android:orientation="vertical">
+
+		    <TextView
+			android:id="@+id/textViewDateLabel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="Date"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="18sp"
+			android:textStyle="bold" />
+
+		    <TextView
+			android:id="@+id/textViewDateValue"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="N/A"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryColor"
+			android:textSize="18sp" />
+
+		</LinearLayout>
+
+	    </LinearLayout>
+
+	</LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

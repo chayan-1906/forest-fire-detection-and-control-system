@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainHeadOfficeActivity">
+
+    <ScrollView
+	android:id="@+id/scrollView"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentTop="true"
+	android:layout_above="@id/relativeLayoutCopyright"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginHorizontal="16dp"
+	android:layout_marginVertical="10dp">
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical">
+
+	    <LinearLayout
+		android:id="@+id/linearLayoutDetectedNotDetected"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<!-- Fire Not Detected -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutFireNotDetected"
+		    android:layout_width="match_parent"
+		    android:layout_height="200dp"
+		    android:layout_marginVertical="10dp"
+		    android:background="@drawable/fire_not_detected"
+		    android:orientation="horizontal">
+
+		    <TextView
+			android:id="@+id/textViewFireNotDetected"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:fontFamily="serif"
+			android:text="Fire \n Not Detected"
+			android:textAlignment="center"
+			android:textColor="@color/primaryTextColor"
+			android:textSize="40sp"
+			android:textStyle="bold" />
+
+		</LinearLayout>
+
+		<!-- Fire Detected -->
+		<LinearLayout
+		    android:id="@+id/linearLayoutFireDetected"
+		    android:layout_width="match_parent"
+		    android:layout_height="200dp"
+		    android:layout_marginVertical="10dp"
+		    android:background="@drawable/fire_detected"
+		    android:orientation="horizontal"
+		    android:visibility="gone">
+
+		    <TextView
+			android:id="@+id/textViewFireDetected"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="Fire \n Detected"
+			android:textAlignment="center"
+			android:textColor="@color/primaryTextColor"
+			android:textSize="40sp"
+			android:textStyle="bold" />
+
+		</LinearLayout>
+
+	    </LinearLayout>
+
+	    <!-- Map View -->
+	    <androidx.appcompat.widget.AppCompatButton
+		android:id="@+id/mapView"
+		style="@style/Theme.AppCompat"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_marginVertical="10dp"
+		android:background="@drawable/shape_button"
+		android:fontFamily="serif"
+		android:foreground="?android:attr/selectableItemBackground"
+		android:text="Navigation Map"
+		android:textColor="@color/primaryTextColor" />
+
+	</LinearLayout>
+
+    </ScrollView>
+
+    <!-- Copyright -->
+    <RelativeLayout
+	android:id="@+id/relativeLayoutCopyright"
+	android:layout_width="match_parent"
+	android:layout_height="50dp"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_alignParentBottom="true"
+	android:layout_marginHorizontal="16dp"
+	android:layout_marginBottom="16dp"
+	android:gravity="center">
+
+	<de.hdodenhof.circleimageview.CircleImageView
+	    android:id="@+id/circleImageViewCopyright"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginEnd="10dp"
+	    android:layout_toStartOf="@id/textViewCopyright"
+	    android:src="@drawable/ic_copyright" />
+
+	<TextView
+	    android:id="@+id/textViewCopyright"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:text="2021 Phoenix-4. All rights reserved"
+	    android:textAlignment="center"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="15sp"
+	    android:textStyle="italic" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

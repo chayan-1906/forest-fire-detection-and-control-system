@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cardViewReportListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#4E3620"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp">
+
+    <RelativeLayout
+	android:id="@+id/relativeLayoutReportListItem"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/report_list_item_gradient"
+	android:padding="16dp">
+
+	<TextView
+	    android:id="@+id/textViewUserName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="User Name: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="20sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewEmail"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewUserName"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Email: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="20sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewFireLocation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewEmail"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Fire Location: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="bold|italic" />
+
+	<TextView
+	    android:id="@+id/textViewCurrentLocationRegOffice"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewFireLocation"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Regional Office Location: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewDistance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewCurrentLocationRegOffice"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Distance: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewTimestamp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewDistance"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:fontFamily="serif"
+	    android:text="Date: \nTime"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

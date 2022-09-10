@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cardViewJobListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#7D1935"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="10dp">
+
+    <RelativeLayout
+	android:id="@+id/relativeLayoutJobListItem"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/job_list_item_gradient"
+	android:padding="16dp">
+
+	<TextView
+	    android:id="@+id/textViewFireLocation"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Fire Location: 10.2424, 14.4213"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewDistance"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewFireLocation"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Distance: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewDateTime"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewDistance"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Date: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+	<TextView
+	    android:id="@+id/textViewTimeSpent"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textViewDateTime"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginVertical="5dp"
+	    android:ellipsize="end"
+	    android:fontFamily="serif"
+	    android:singleLine="true"
+	    android:text="Time Spent: "
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="18sp"
+	    android:textStyle="italic|bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

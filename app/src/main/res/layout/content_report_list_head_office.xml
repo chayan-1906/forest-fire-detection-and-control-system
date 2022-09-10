@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRecyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_fragment_gradient"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.ReportListHeadOfficeActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+	android:id="@+id/relativeLayoutToolbar"
+	android:layout_width="match_parent"
+	android:layout_height="65dp">
+
+	<androidx.appcompat.widget.AppCompatImageButton
+	    android:id="@+id/image_button_back"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginStart="10dp"
+	    android:background="@android:color/transparent"
+	    android:gravity="center"
+	    android:src="@drawable/ic_back_black" />
+
+	<!-- Activity Name -->
+	<TextView
+	    android:id="@+id/textViewAppName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginStart="8dp"
+	    android:layout_toEndOf="@id/image_button_back"
+	    android:fontFamily="serif"
+	    android:gravity="center"
+	    android:text="Report"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="20sp"
+	    android:textStyle="bold" />
+
+	<!-- Toolbar Date Time -->
+	<LinearLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="center"
+	    android:layout_toStartOf="@id/image_button_more"
+	    android:layout_toEndOf="@id/textViewAppName"
+	    android:orientation="horizontal">
+
+	    <!-- Date -->
+	    <TextView
+		android:id="@+id/textViewDate"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_marginTop="8dp"
+		android:layout_weight="1"
+		android:fontFamily="serif"
+		android:gravity="center"
+		android:text="13/08/21"
+		android:textAlignment="center"
+		android:textColor="@color/secondaryDarkColor"
+		android:textSize="16sp" />
+
+	    <!-- Digital Clock -->
+	    <TextClock
+		android:id="@+id/digitalClock"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_marginTop="8dp"
+		android:layout_weight="1"
+		android:fontFamily="serif"
+		android:format12Hour="hh:mm:ss"
+		android:gravity="center"
+		android:textAlignment="center"
+		android:textColor="@color/secondaryColor"
+		android:textSize="15sp" />
+
+	</LinearLayout>
+
+	<!-- Image Button More -->
+	<androidx.appcompat.widget.AppCompatImageButton
+	    android:id="@+id/image_button_more"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_gravity="end"
+	    android:layout_marginEnd="10dp"
+	    android:background="@android:color/transparent"
+	    android:gravity="center"
+	    android:src="@drawable/ic_more_black" />
+
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <EditText
+	android:id="@+id/editTextSearch"
+	android:layout_width="match_parent"
+	android:layout_height="50dp"
+	android:layout_below="@id/relativeLayoutToolbar"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_marginHorizontal="26dp"
+	android:layout_marginTop="1dp"
+	android:background="@drawable/report_search_background"
+	android:drawableStart="@drawable/ic_search"
+	android:drawablePadding="10dp"
+	android:focusable="auto"
+	android:hint="Search"
+	android:inputType="textCapWords"
+	android:maxLines="1"
+	android:paddingStart="10dp"
+	android:singleLine="true"
+	android:textColor="@color/primaryTextColor"
+	android:textColorHint="#334257"
+	tools:ignore="RtlSymmetry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+	android:id="@+id/recyclerViewReports"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_below="@id/editTextSearch"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_alignParentBottom="true"
+	android:layout_marginHorizontal="16dp"
+	tools:listitem="@layout/report_list_item" />
+
+    <LinearLayout
+	android:id="@+id/linearLayoutNothingToDisplay"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:layout_below="@id/editTextSearch"
+	android:layout_alignParentStart="true"
+	android:layout_alignParentEnd="true"
+	android:layout_alignParentBottom="true"
+	android:orientation="vertical">
+
+	<ImageView
+	    android:id="@+id/imageViewSearchNothingToDisplay"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="2"
+	    android:src="@drawable/ic_search" />
+
+	<TextView
+	    android:id="@+id/textViewNothingToDisplay"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    android:gravity="center|top"
+	    android:text="Nothing to display"
+	    android:textColor="@color/primaryTextColor"
+	    android:textSize="40sp"
+	    android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

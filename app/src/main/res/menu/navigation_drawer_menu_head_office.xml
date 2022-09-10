@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+	android:id="@+id/item_regional_offices"
+	android:icon="@drawable/ic_action_report"
+	android:title="Regional Offices" />
+
+    <item
+	android:id="@+id/item_report"
+	android:icon="@drawable/ic_action_report"
+	android:title="Report" />
+
+    <item
+	android:id="@+id/item_email"
+	android:icon="@drawable/ic_action_email"
+	android:title="Email" />
+
+
+    <item
+	android:id="@+id/item_about_us"
+	android:icon="@drawable/ic_action_info"
+	android:title="About Us" />
+
+</menu>

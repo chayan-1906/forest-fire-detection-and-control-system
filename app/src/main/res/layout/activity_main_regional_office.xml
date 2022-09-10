@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_fragment_gradient"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.MainRegionalOfficeActivity"
+    tools:openDrawer="start">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+	    android:id="@+id/linearLayoutToolbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="65dp"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentEnd="true"
+	    android:background="@drawable/shape_toolbar"
+	    android:paddingHorizontal="10dp"
+	    android:paddingVertical="4dp">
+
+	    <ImageView
+		android:id="@+id/imageViewMenu"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_gravity="center"
+		android:layout_marginStart="10dp"
+		android:gravity="center"
+		android:src="@drawable/ic_menu" />
+
+	    <!-- App Name -->
+	    <TextView
+		android:id="@+id/textViewAppName"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_marginStart="8dp"
+		android:layout_weight="1.5"
+		android:fontFamily="serif"
+		android:gravity="center"
+		android:text="@string/app_name"
+		android:textColor="@color/primaryTextColor"
+		android:textSize="18sp"
+		android:textStyle="bold" />
+
+	    <LinearLayout
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="2"
+		android:layout_gravity="center"
+		android:orientation="vertical">
+
+		<!-- Toolbar User Name -->
+		<TextView
+		    android:id="@+id/textViewUserName"
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_gravity="center"
+		    android:layout_weight="1"
+		    android:ellipsize="end"
+		    android:fontFamily="serif"
+		    android:gravity="center"
+		    android:singleLine="true"
+		    android:text="User Name"
+		    android:textAlignment="center"
+		    android:textColor="@color/secondaryDarkColor"
+		    android:textSize="13sp" />
+
+		<!-- Toolbar Date Time -->
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal">
+
+		    <!-- Date -->
+		    <TextView
+			android:id="@+id/textViewDate"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginTop="4dp"
+			android:layout_weight="1"
+			android:fontFamily="serif"
+			android:gravity="center"
+			android:text="13/08/21"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="13sp" />
+
+		    <!-- Digital Clock -->
+		    <TextClock
+			android:id="@+id/digitalClock"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginTop="4dp"
+			android:layout_weight="1"
+			android:fontFamily="serif"
+			android:format12Hour="hh:mm:ss"
+			android:gravity="center"
+			android:textAlignment="center"
+			android:textColor="@color/secondaryDarkColor"
+			android:textSize="13sp" />
+
+		</LinearLayout>
+
+	    </LinearLayout>
+
+	    <!-- Logout -->
+	    <androidx.appcompat.widget.AppCompatImageButton
+		android:id="@+id/imageButtonLogout"
+		android:layout_width="30dp"
+		android:layout_height="match_parent"
+		android:layout_marginEnd="16dp"
+		android:background="@null"
+		android:src="@drawable/ic_logout_white" />
+
+	</LinearLayout>
+
+	<FrameLayout
+	    android:id="@+id/fragment_container"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/linearLayoutToolbar"
+	    android:layout_alignParentStart="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+	android:id="@+id/navigationDrawerMenu"
+	android:layout_width="wrap_content"
+	android:layout_height="match_parent"
+	android:layout_gravity="start"
+	app:headerLayout="@layout/navigation_header"
+	app:menu="@menu/navigation_drawer_menu_regional_office" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
